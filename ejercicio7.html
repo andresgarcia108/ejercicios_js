@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nota1 = prompt("Ingrese la nota 1: ")
+        while (true)
+        {
+            if (!isNaN(nota1))
+            break;
+            else
+            var nota1 = prompt("Ingrese número válido para la nota 1: ")
+        }
+        var nota2 = prompt("Ingrese la nota 2: ")
+        while (true)
+        {
+            if (!isNaN(nota2))
+            break;
+            else
+            var nota1 = prompt("Ingrese número válido para la nota 2: ")
+        }
+        var nota3 = prompt("Ingrese la nota 3: ")
+        while (true)
+        {
+            if (!isNaN(nota3))
+            break;
+            else
+            var nota1 = prompt("Ingrese número válido para la nota 3: ")
+        }
+        
+        nota1 =parseFloat(nota1)
+        nota2 =parseFloat(nota2)
+        nota3 =parseFloat(nota3)
+        let hola = nota1 + nota2 + nota3
+        var media = Number(hola/3)
+        if (media>=30)
+            {
+            alert("Estoy aprobado, con una media de: " + media)
+            }
+        else
+            {
+            alert("Estoy reprobado, con una media de:  " + media)
+            }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Pedir al usuario que introduzca dos números y una operación
+        let numero1 = prompt("Introduce el primer número:");
+        let numero2 = prompt("Introduce el segundo número:");
+        let operacion = prompt("Introduce la operación a realizar (+, -, *, /):");
+
+        // Convertir los valores introducidos a números
+        numero1 = parseFloat(numero1);
+        numero2 = parseFloat(numero2);
+
+        // Validar si los valores introducidos son números
+        if (!isNaN(numero1) && !isNaN(numero2)) {
+            // Verificar la operación y realizar el cálculo correspondiente
+            let resultado;
+            switch (operacion) {
+                case "+":
+                    resultado = numero1 + numero2;
+                    break;
+                case "-":
+                    resultado = numero1 - numero2;
+                    break;
+                case "*":
+                    resultado = numero1 * numero2;
+                    break;
+                case "/":
+                    if (numero2 !== 0) {
+                        resultado = numero1 / numero2;
+                    } else {
+                        alert("No se puede dividir por cero.");
+                        // Salir de la ejecución si el segundo número es cero
+                        throw new Error("División por cero.");
+                    }
+                    break;
+                default:
+                    // Si la operación no es válida, mostrar un mensaje de error
+                    alert("Operación incorrecta.");
+                    // Salir de la ejecución
+                    throw new Error("Operación incorrecta.");
+            }
+
+            // Mostrar el resultado en un alert si la operación es válida
+            alert(`El resultado de ${numero1} ${operacion} ${numero2} es: ${resultado}`);
+        } else {
+            // Si al menos uno de los valores no es un número, mostrar un mensaje de error
+            alert("Por favor, introduce dos números válidos.");
+        }
+
+    </script>
+</body>
+</html>
